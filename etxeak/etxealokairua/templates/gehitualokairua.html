@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gehitu alokairua</title>
+</head>
+<body>
+    <h2>gehitu alokairua</h2>
+    <form action="gehitualokairuaerregistroa/" method="POST">
+        {%csrf_token%}
+        <label for="">etxearen izena: </label>
+        <select name="etxea_izena" required><br><br>
+            {%for etxea in etxea%}
+                <option>{{etxea.e_izena}}</option>
+            {%endfor%}
+        </select><br><br>
+
+        <label for="">pertsonaren izena: </label>
+        <select name="pertsona_izena" required><br><br>
+            {%for pertsona in pertsona%}
+                <option>{{pertsona.p_izena}}</option>
+            {%endfor%}
+        </select><br><br>
+
+        <label for="">alokairuaren hasiera data: </label>
+        <input type="date" name="alokairu_data_hasiera" required><br><br>
+
+        <label for="">alokairuaren amaiera data: </label>
+        <input type="date" name="alokairu_data_amaiera" required><br><br>
+
+        <input type="submit" value="gehitu">
+    </form>
+</body>
+</html>

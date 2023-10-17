@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gehitu etxea</title>
+</head>
+<body>
+    <h2>gehitu etxea</h2>
+    <form action="gehituetxeaerregistroa/" method="POST">
+        {%csrf_token%}
+        <label for="">izena: </label>
+        <input type="text" name="e_izena" required><br><br>
+
+        <label for="">herria: </label>
+        <input type="text" name="e_herria" required><br><br>
+
+        <label for="">pertsona kopurua: </label>
+        <input type="text" name="e_pertsonakopurua" required><br><br>
+
+        <input type="submit" value="gehitu">
+    </form>
+</body>
+</html>

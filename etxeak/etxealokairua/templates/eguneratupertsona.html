@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eguneratu pertsona</title>
+</head>
+<body>
+    <h1>eguneratu pertsona</h1>
+    <form action="eguneratuerregistroa/{{pertsona.p_nan}}" method="POST">
+        {%csrf_token%}
+        <label>nan: </label>
+        <input type="text" name="p_nan" value="{{pertsona.p_nan}}" readonly></input><br><br>
+
+        <label>izena:</labes>
+        <input type="text" name="p_izena" value="{{pertsona.p_izena}}"></input><br><br>
+
+        <label>emaila:</labes>
+        <input type="text" name="p_emaila" value="{{pertsona.p_emaila}}"></input><br><br>
+
+        <input type="submit" value="submit"></input>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eguneratu etxea</title>
+</head>
+<body>
+    <h1>eguneratu etxea</h1>
+    <form action="eguneratuetxeaerregistroa/{{etxea.id}}" method="POST">
+        {%csrf_token%}
+        <label>izena: </label>
+        <input type="text" name="e_izena" value="{{etxea.e_izena}}" readonly></input><br><br>
+
+        <label>herria:</labes>
+        <input type="text" name="e_herria" value="{{etxea.e_herria}}"></input><br><br>
+
+        <label>pertsona kopurua:</labes>
+        <input type="text" name="e_pertsonakopurua" value="{{etxea.e_pertsonakopurua}}"></input><br><br>
+
+        <input type="submit" value="submit"></input>
+    </form>
+
+</body>
+</html>
